@@ -1,6 +1,5 @@
 
-import React from 'react';
-import { Film, Video, MessageSquare, Book } from 'lucide-react';
+import { Book, Film, MessageSquare, Video } from 'lucide-react';
 
 const services = [
   {
@@ -33,20 +32,19 @@ const ServicesSection = () => {
           <h2 className="text-accent-gradient font-bold text-lg mb-2">SERVICES</h2>
           <h3 className="text-4xl font-bold text-white mb-4">My Expertise</h3>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Professional documentary and streaming services with a focus on compelling storytelling and technical excellence.
+            Video Editor Specializing in Documentary & Streaming | Storytelling & Technical Precision.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="service-card"
-              style={{animationDelay: `${0.2 * index}s`, animationFillMode: 'both'}}
+            <div
+              key={index}
+              className="service-card flex space-x-2 items-center"
+              style={{ animationDelay: `${0.2 * index}s`, animationFillMode: 'both' }}
             >
               <div className="mb-4">{service.icon}</div>
               <h4 className="text-xl font-bold text-white mb-3">{service.title}</h4>
-              <p className="text-gray-300">{service.description}</p>
             </div>
           ))}
         </div>
@@ -58,8 +56,8 @@ const ServicesSection = () => {
               <p className="text-gray-300">Let's collaborate on your next documentary project or streaming production.</p>
             </div>
             <div className="flex-shrink-0">
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 className="inline-block px-6 py-3 bg-filmmaker-accent text-white font-medium rounded-full transition-all duration-300 hover:shadow-glow hover:bg-filmmaker-accent/90"
               >
                 Start a Project

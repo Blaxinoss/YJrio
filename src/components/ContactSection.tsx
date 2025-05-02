@@ -1,6 +1,6 @@
 
-import React, { useState } from 'react';
 import { useToast } from "@/components/ui/use-toast";
+import React, { useState } from 'react';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -18,15 +18,15 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // In a real application, you would send this data to your backend or an email service
     console.log('Form submitted:', formData);
-    
+
     toast({
       title: "Message sent!",
       description: "Thank you for reaching out. I'll get back to you soon.",
     });
-    
+
     // Reset form
     setFormData({
       name: '',
@@ -44,10 +44,11 @@ const ContactSection = () => {
             <h2 className="text-accent-gradient font-bold text-lg mb-2">GET IN TOUCH</h2>
             <h3 className="text-4xl font-bold text-white mb-4">Let's Work Together</h3>
             <p className="text-gray-300 mb-8">
-              Have a documentary idea or need professional video production services? 
-              Fill out the form and I'll get back to you to discuss how we can bring your vision to life.
+              Have a Documentary Idea or Need Expert Video Editing Services?
+              Fill out the form, and I’ll get back to you to discuss how we can bring your vision to life.
             </p>
-            
+
+
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-filmmaker-accent/20 text-filmmaker-accent">
@@ -57,10 +58,10 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Call Me</p>
-                  <p className="text-white font-medium">(123) 456-7890</p>
+                  <p className="text-white font-medium">+20 109 294 6646</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-filmmaker-accent/20 text-filmmaker-accent">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -70,10 +71,11 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Email Me</p>
-                  <p className="text-white font-medium">contact@storylens.com</p>
+                  <p className="text-white font-medium">yousefjiro30@gmail.com
+                  </p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-filmmaker-accent/20 text-filmmaker-accent">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -83,11 +85,11 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Location</p>
-                  <p className="text-white font-medium">Los Angeles, CA</p>
+                  <p className="text-white font-medium">Cairo, Egypt</p>
                 </div>
               </div>
             </div>
-            
+
             <div className="flex space-x-4">
               {/* Social media icons */}
               <a href="#" className="w-10 h-10 rounded-full flex items-center justify-center border border-gray-700 text-gray-400 hover:text-filmmaker-accent hover:border-filmmaker-accent transition-colors">
@@ -116,15 +118,15 @@ const ContactSection = () => {
               </a>
             </div>
           </div>
-          
+
           <div className="glass rounded-xl p-8 animate-fade-in">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-white text-sm mb-2" htmlFor="name">Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
+                  <input
+                    type="text"
+                    id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -134,9 +136,9 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <label className="block text-white text-sm mb-2" htmlFor="email">Email</label>
-                  <input 
-                    type="email" 
-                    id="email" 
+                  <input
+                    type="email"
+                    id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
@@ -145,15 +147,15 @@ const ContactSection = () => {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label className="block text-white text-sm mb-2" htmlFor="project">Project Type</label>
-                <select 
-                  id="project" 
+                <select
+                  id="project"
                   name="project"
                   value={formData.project}
                   onChange={handleChange}
-                  className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 w-full text-white focus:outline-none focus:ring-2 focus:ring-filmmaker-accent"
+                  className="bg-gray-800  border-gray-600 p-2 rounded-md bg-white/10 border border-white/20 px-4 py-3 w-full text-white focus:outline-none focus:ring-2 focus:ring-filmmaker-accent"
                   required
                 >
                   <option value="">Select Project Type</option>
@@ -164,11 +166,11 @@ const ContactSection = () => {
                   <option value="Other">Other</option>
                 </select>
               </div>
-              
+
               <div>
                 <label className="block text-white text-sm mb-2" htmlFor="message">Your Message</label>
-                <textarea 
-                  id="message" 
+                <textarea
+                  id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -176,9 +178,9 @@ const ContactSection = () => {
                   required
                 ></textarea>
               </div>
-              
-              <button 
-                type="submit" 
+
+              <button
+                type="submit"
                 className="w-full px-6 py-3 bg-filmmaker-accent text-white font-medium rounded-lg transition-all duration-300 hover:shadow-glow hover:bg-filmmaker-accent/90"
               >
                 Send Message
