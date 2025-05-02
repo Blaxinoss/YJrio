@@ -2,7 +2,7 @@
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import VideoSlider from './videoSlider';
+import VideoSlider from './VideoSlider';
 // Define the project data structure
 interface Project {
   id: string;
